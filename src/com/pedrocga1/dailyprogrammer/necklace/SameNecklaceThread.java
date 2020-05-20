@@ -34,7 +34,6 @@ public class SameNecklaceThread implements Runnable {
     public void run() {
         if (this.firstNecklace.isEmpty() && secondNecklace.isEmpty()) {
             callback.run();
-            System.exit(0);
         }
 
         int str1Len = firstNecklace.length();
@@ -49,7 +48,6 @@ public class SameNecklaceThread implements Runnable {
                     && firstNecklace.substring(str1Len - i)
                     .equals(secondNecklace.substring(0, i))) {
                 callback.run();
-                System.exit(0);
             }
         }
     }
