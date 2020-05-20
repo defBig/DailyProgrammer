@@ -29,6 +29,7 @@ public class Main {
         int availableProcessors = Runtime.getRuntime().availableProcessors();
         Runnable[] threads = new Runnable[availableProcessors];
         for (int i = 0; i < availableProcessors; i++) {
+            assert str2 != null;
             threads[i]
                 = new SameNecklaceThread(
                     str1,
