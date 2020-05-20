@@ -2,7 +2,6 @@ package com.pedrocga1.dailyprogrammer.necklace;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.net.URI;
 import java.util.Scanner;
 
 public class Main {
@@ -37,7 +36,13 @@ public class Main {
                     str2.length() / availableProcessors * i,
                     str2.length() / availableProcessors * (i + 1),
                     new Thread(() ->  {
-                        System.out.println(System.nanoTime() - start);
+                        System.out.println(
+                                "Both strings represent the same necklace! "
+                                + "Execution time: "
+                                    .concat(Long
+                                            .toString
+                                                    (System.nanoTime()
+                                                            - start)));
                         System.exit(0);
                     })
                 );
